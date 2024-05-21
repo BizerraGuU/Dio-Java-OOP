@@ -1,25 +1,34 @@
 # Dio-Java-OOPclassDiagram
-iPhone<|.. Funcionalidades
+### Diagrama UML do exercício "DesafioUmPOO"
 
-Funcionalidades <|-- ReprodutorMusical
+```mermaid
+classDiagram
+    class ReprodutorMusical {
+       tocarMusica() void
+        pausarMusica() void 
+       selecionarMusica(String musica) void
+    }
 
-ReprodutorMusical : tocarMusica() void
-ReprodutorMusical : pausarMusica() void 
-ReprodutorMusical : selecionarMusica(String musica) void
+    class AparelhoTelefonico {
+      ligar(String numero) void
+atender() void
+iniciarCorreioVoz() void
+    }
 
-Funcionalidades <|-- AparelhoTelefonico
+    class NavegadorInternet {
+         exibirPagina(String url): void
+adicionaNovaAba(): void
+atualizarPagina(): void
+    }
 
-AparelhoTelefonico : ligar(String numero) void
-AparelhoTelefonico : atender() void
-AparelhoTelefonico :  iniciarCorreioVoz() void
+    class iPhone {
+    }
 
-Funcionalidades <|-- NavegadorInternet
-
-NavegadorInternet : exibirPagina(String url) void
-NavegadorInternet : adicionaNovaAba() void
-NavegadorInternet : atualizarPagina() void
-
-
+    iPhone <|.. Funcionalidades
+    Funcionalidades <|-- ReprodutorMusical
+    Funcionalidades <|-- AparelhoTelefonico
+    Funcionalidades <|-- NavegadorInternet
+```
 
 
 
